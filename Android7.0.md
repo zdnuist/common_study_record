@@ -40,3 +40,15 @@ SurfaceView 类可减少屏幕合成对电池的消耗，因为它是在专用�
 现在，SurfaceView 对象的内容位置和包含的应用内容同步更新。这一变化导致的一个结果是，在画面移动时，SurfaceView 中播放的视频的简单的平移或缩放不再在画面侧面产生黑条。
 
 从 Android 7.0 开始，我们强烈建议您使用 SurfaceView 代替 TextureView，以实现省电。  
+
+
+##### 示例
+[多窗口 Playground](https://github.com/googlesamples/android-MultiWindowPlayground)
+
+[活动通知](https://github.com/googlesamples/android-ActiveNotifications)  
+
+[消息传递服务](https://github.com/googlesamples/android-MessagingService)
+
+[直接启动](https://github.com/googlesamples/android-DirectBoot  )
+
+[作用域目录访问](https://github.com/googlesamples/android-ScopedDirectoryAccess)
