@@ -78,7 +78,7 @@ android.buildCacheDir=<path-to-directory>
 ```
 Clear the build Cache
 ```
-gradlew cleanBuildCach
+gradlew cleanBuildCache
 ```
 
 Disable the build cache
