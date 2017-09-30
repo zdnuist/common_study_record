@@ -35,3 +35,6 @@ byte[] buffArray = Request.ADAPTER.encode(data); //进行序列化
 Okhttp3.Response response;
 Response.ADAPTER.decode (response.body().byteStream()); //进行反序列化
 ```
+
+##### 参考
+http://blog.csdn.net/oqqtim12/article/details/50505590
