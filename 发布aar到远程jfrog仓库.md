@@ -110,3 +110,6 @@ bintray.apikey = //jfrog个人主页上查看
 ```
 gradlew :libraryModule:bintrayUpload
 ```
+
+##### 参考
+1. https://www.jianshu.com/p/31410d71eaba
