@@ -1,7 +1,12 @@
 ##### 注册JFrog
 地址：https://bintray.com
 
+##### LOCAL DEMO
+'C:\zdnuist\work_space\UploadModuleDemo'
+
+
 ##### Create Repository
+右上角->view profile
 name: REP_NAME (后面上传的时候需要统一)
 type: maven
 
@@ -110,6 +115,9 @@ bintray.apikey = //jfrog个人主页上查看
 ```
 gradlew :libraryModule:bintrayUpload
 ```
+
+##### 文件地址
+https://dl.bintray.com/frogz/
 
 ##### 参考
 1. https://www.jianshu.com/p/31410d71eaba
