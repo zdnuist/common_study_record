@@ -26,4 +26,4 @@ Java队形是不是都创建在堆上呢？
 
 ### 下面的是我的公众号二维码图片，欢迎关注
 
-![图注:Android上下而求索](./img/qrcode_zdnuist.jpg)
+![图注:Android上下而求索](./img/qrcode_zdnuist.png)
