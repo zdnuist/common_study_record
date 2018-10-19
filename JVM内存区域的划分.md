@@ -9,14 +9,14 @@
 4. 方法区（Method Area）。这也是所有线程共享的一块内存区域，用来存储所谓的元数据（Meta），例如类结构信息，以及对应的运行时常量池、字段、方法代码等。
 由于早期的Hotspot JVM实现，很多人习惯将方法区称为永久代（Permanent Generation）。Oracle JDK 8 中将永久代移除，同时增加了元数据区（Metaspace）。
 5. 运行时常量池（Run-Time Constant Pool），这是方法区的一部分。Java的常量池可以存放各种常量信息，不管是编译期生成的各种字面量，还是需要在运行时决定的符号引用，所以它比一般语言的符号表存储的信息更加宽泛。
-6. 本地方法栈（Native Method Stack）。它和Java虚拟机栈是非诚相似的，支持对本地方法的调用，也是每个线程都会创建一个。在Oracle Hotspot JVM中，本地方法栈和Java虚拟机栈是在用一块区域，这完全取决于技术实现的决定，并未在规范中强制。
+6. 本地方法栈（Native Method Stack）。它和Java虚拟机栈是非常相似的，支持对本地方法的调用，也是每个线程都会创建一个。在Oracle Hotspot JVM中，本地方法栈和Java虚拟机栈是在用一块区域，这完全取决于技术实现的决定，并未在规范中强制。
 
 ##### 扩展
 1. 直接内存（Direct Memory）区域，它是Direct Buffer所直接分配的内存，也是个容易出现问题的地方。尽管在 JVM 工程师的眼中，并不认为它是 JVM 内部内模型中。
 2. JVM 本身是个本地程序，还需要其他的内存去完成各种基本任务,比如JIT Compile 在运行时对热点方法进行编译，就会将编译后的方法储存在Code Cache里面；GC等功能需要运行在本地线程之中，类似部分都需要占用内存空间。
 
 ##### 问题
-Java队形是不是都创建在堆上呢？  
+Java对象是不是都创建在堆上呢？  
 目前有一些观点认为通过[逃逸分析](https://blog.csdn.net/blueheart20/article/details/76167489),JVM会在栈上分配那些不会逃逸的对象，这在理论上是可行的，但是取决于JVM设计者的选择。Oracle Hotspot JVM中并未这么做，这一点在逃逸分析相关的[文档](https://docs.oracle.com/javase/8/docs/technotes/guides/vm/performance-enhancements-7.html#escapeAnalysis)里已经说明，所以可以明确所有的对象实例都是创建在堆上。
 
 ##### 参考
